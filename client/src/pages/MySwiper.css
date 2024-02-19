@@ -1,0 +1,26 @@
+.mySwiper {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.swiper {
+  height: 200px;
+}
+
+.slide {
+  height: 150px;
+  background-color: rgb(120, 190, 251);
+  /* 반사 효과 */
+  -webkit-box-reflect: below 30px linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.5));
+}
+
+/* pagination active button */
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+}
