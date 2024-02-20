@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.42",
     "@tanstack/react-query": "^5.17.9",
     "@types/js-cookie": "^3.0.6",
     "@types/react-transition-group": "^4.4.10",
@@ -23,6 +24,7 @@
     "react-intersection-observer": "^9.5.3",
     "react-js-pagination": "^3.0.3",
     "react-router-dom": "^6.21.1",
+    "react-scrollama": "^2.3.3",
     "react-spring": "^9.7.3",
     "react-spring-bottom-sheet": "^3.4.1",
     "react-transition-group": "^4.4.5",

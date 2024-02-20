@@ -11,6 +11,7 @@ import ReactCookie from './pages/ReactCookie';
 import ReactJWTTest from './pages/ReactJWTTest';
 import Sweetalert2 from './pages/Sweetalert2';
 import Socket from './pages/SocketTest';
+import ScrolluseRef from './pages/ScrolluseRef';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Route path="/reactCookie" element={<ReactCookie/>}/>
       <Route path="/reactJwt" element={<ReactJWTTest/>}/>
       <Route path="/socket" element={<Socket/>}/>
+      <Route path="/scrolluseRef" element={<ScrolluseRef/>}/>
 
     </Routes>
   );
