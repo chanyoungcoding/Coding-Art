@@ -29,6 +29,7 @@ const Home = () => {
       <Link to={'/reactCookie'}>Cookie communication</Link>
       <Link to={'/reactJwt'}>Jwt communication</Link>
       <Link to={'/socket'}>Socket</Link>
+      <Link to={'/reacthookform'}>React hook form</Link>
     </HomeContainer>
   );
 }
