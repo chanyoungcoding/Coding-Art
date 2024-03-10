@@ -13,6 +13,7 @@ import Sweetalert2 from './pages/Sweetalert2';
 import Socket from './pages/SocketTest';
 import ScrolluseRef from './pages/ScrolluseRef';
 import ReactHookForm from './pages/ReactHookForm';
+import MatterTest from './pages/MatterTest';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/socket" element={<Socket/>}/>
       <Route path="/scrolluseRef" element={<ScrolluseRef/>}/>
       <Route path="/reacthookform" element={<ReactHookForm/>}/>
+      <Route path="/matter" element={<MatterTest/>}/>
 
     </Routes>
   );
