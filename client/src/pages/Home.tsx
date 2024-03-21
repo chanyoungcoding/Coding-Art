@@ -31,6 +31,7 @@ const Home = () => {
       <Link to={'/socket'}>Socket</Link>
       <Link to={'/reacthookform'}>React hook form</Link>
       <Link to={'/matter'}>matter</Link>
+      <Link to={'/reactgallery'}>reactgalleryimage</Link>
     </HomeContainer>
   );
 }
