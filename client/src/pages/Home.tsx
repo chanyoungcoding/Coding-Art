@@ -2,8 +2,10 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 const HomeContainer = styled.div`
-  height: 100vh;
+  width: 1000px;
+  margin: 200px auto 0px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   a {
@@ -32,6 +34,7 @@ const Home = () => {
       <Link to={'/reacthookform'}>React hook form</Link>
       <Link to={'/matter'}>matter</Link>
       <Link to={'/reactgallery'}>reactgalleryimage</Link>
+      <Link to={'/motion'}>motion</Link>
     </HomeContainer>
   );
 }

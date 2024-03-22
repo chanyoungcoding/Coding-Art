@@ -15,6 +15,7 @@ import ScrolluseRef from './pages/ScrolluseRef';
 import ReactHookForm from './pages/ReactHookForm';
 import MatterTest from './pages/MatterTest';
 import ReactGalleryImg from './pages/ReactGalleryImg';
+import Motion from './pages/Motion';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Route path="/reacthookform" element={<ReactHookForm/>}/>
       <Route path="/matter" element={<MatterTest/>}/>
       <Route path="/reactgallery" element={<ReactGalleryImg/>}/>
+      <Route path="/motion" element={<Motion/>}/>
 
     </Routes>
   );
