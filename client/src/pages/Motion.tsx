@@ -7,6 +7,33 @@ const variants = {
   closed: { opacity: 0, x: "-100%" },
 }
 
+const container = {
+  hidden: {opacity: 1, scale: 0},
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3, // 0.3 초 뒤에 실행
+      staggerChildren: 0.2  // 0.2 초 마다 자식 컴포넌트 등장
+    }
+  }
+}
+
+const item = {
+  hidden: {opacity: 0, y: 20},
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
+
+const tabs = [
+  {id: "1", label: "apple"},
+  {id: "2", label: "banana"},
+  {id: "3", label: "orange"},
+  {id: "4", label: "tomato"},
+]
+
 const Motion = () => {
   
   const { scrollYProgress } = useScroll()
@@ -18,6 +45,7 @@ const Motion = () => {
 
 
   const [isOpen, setIsOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
 
   return (
     <MotionContainer>
@@ -43,12 +71,50 @@ const Motion = () => {
         style={{ scaleX }}
       />
 
+      {/* 자식 컴포넌트랑 같이 애니메이션 적용 */}
+      <motion.ul
+        className="container"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        {[1,2,3,4].map(index => (
+          <motion.li className="item" key={index} variants={item} />
+        ))}
+      </motion.ul>
+
+      <MotionLayoutIdBox>
+          {tabs.map(tab => (
+            <button key={tab.id} onClick={() => setActiveTab(tab.id)}>
+              {activeTab === tab.id && (
+                <motion.div className="layoutid-background" layoutId="active-pill"/>
+              )}
+              <span>{tab.label}</span>
+            </button>
+          ))}
+      </MotionLayoutIdBox>
+
     </MotionContainer>
   )
 }
 
 const MotionContainer = styled.div`
   height: 3000px;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.2);
+    .item {
+      width: 125px;
+      height: 125px;
+      margin: 15px;
+      border-radius: 100%;
+      background-color: white;
+    }
+  }
 `
 
 const MotionBox = styled(motion.div)`
@@ -70,6 +136,27 @@ const MotionScrollBox = styled(motion.div)`
   height: 30px;
   background-color: #a0a0a0;
   transform-origin: center left;
+`
+
+const MotionLayoutIdBox = styled(motion.div)`
+  button {
+    position: relative;
+    background-color: white;
+    margin: 10px ;
+    outline: none;
+    border: none;
+  }
+  .layoutid-background {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #1d64ff;
+  }
+  span {
+    font-size: 1.5rem;
+  }
 `
 
 export default Motion
@@ -162,4 +249,8 @@ export default Motion
 
 -------------------------------------------------
 
+
+  🐣 layoutId
+  layoutId="active-pill" 으로 쓰이며 애니메이션 전환을 부드럽게 해준다.
+  즉 useState 값의 따라 컴포넌트간의 이동이 있다면 사용할 수 있다.
 */
