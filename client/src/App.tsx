@@ -15,7 +15,7 @@ import ScrolluseRef from './pages/ScrolluseRef';
 import ReactHookForm from './pages/ReactHookForm';
 import MatterTest from './pages/MatterTest';
 import ReactGalleryImg from './pages/ReactGalleryImg';
-import Motion from './pages/Motion';
+import Motion from './pages/motion/Motion';
 
 function App() {
   return (

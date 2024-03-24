@@ -1,10 +1,11 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
+import AnimatePresenceBox from "./AnimatePresenceBox";
 
 const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
+  open: { opacity: 1, translateX: 100 },
+  closed: { opacity: 0, translateX: 0 },
 }
 
 const container = {
@@ -93,6 +94,8 @@ const Motion = () => {
             </button>
           ))}
       </MotionLayoutIdBox>
+
+      <AnimatePresenceBox/>
 
     </MotionContainer>
   )
@@ -253,4 +256,8 @@ export default Motion
   🐣 layoutId
   layoutId="active-pill" 으로 쓰이며 애니메이션 전환을 부드럽게 해준다.
   즉 useState 값의 따라 컴포넌트간의 이동이 있다면 사용할 수 있다.
+
+  🐣 AnimatePresence
+  React 애플리케이션에서 요소가 마운트되거나 언마운트 될 때 애니메이션을 쉽게 추가할 수 있게 해주는 역할을 합니다.
+
 */
