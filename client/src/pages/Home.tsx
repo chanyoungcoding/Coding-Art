@@ -35,6 +35,7 @@ const Home = () => {
       <Link to={'/matter'}>matter</Link>
       <Link to={'/reactgallery'}>reactgalleryimage</Link>
       <Link to={'/motion'}>motion</Link>
+      <Link to={'/reacttransition'}>ReactTransitionGroup</Link>
     </HomeContainer>
   );
 }

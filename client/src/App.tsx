@@ -1,10 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation} from 'react-router-dom';
 
 import Home from './pages/Home';
 import ReactSpringBottomSheet from './pages/ReactSpringBottomSheet';
 import MySwiper from './pages/MySwiper';
 
 import './App.css';
+
 import InfinityScroll from './pages/InfinityScroll';
 import ReactPagination from './pages/ReactPagination';
 import ReactCookie from './pages/ReactCookie';
@@ -18,8 +19,11 @@ import ReactGalleryImg from './pages/ReactGalleryImg';
 import Motion from './pages/motion/Motion';
 
 function App() {
+
+  const location = useLocation();
+
   return (
-    <Routes>
+    <Routes location={location}>
       <Route path="/" element={<Home/>}/>
       <Route path="/bottomSheet" element={<ReactSpringBottomSheet/>}/>
       <Route path="/swiper" element={<MySwiper/>}/>
@@ -34,8 +38,8 @@ function App() {
       <Route path="/matter" element={<MatterTest/>}/>
       <Route path="/reactgallery" element={<ReactGalleryImg/>}/>
       <Route path="/motion" element={<Motion/>}/>
-
     </Routes>
+
   );
 }
 
