@@ -17,6 +17,7 @@ import ReactHookForm from './pages/ReactHookForm';
 import MatterTest from './pages/MatterTest';
 import ReactGalleryImg from './pages/ReactGalleryImg';
 import Motion from './pages/motion/Motion';
+import FormData from './pages/FormDataPage';
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
       <Route path="/matter" element={<MatterTest/>}/>
       <Route path="/reactgallery" element={<ReactGalleryImg/>}/>
       <Route path="/motion" element={<Motion/>}/>
+      <Route path="/formdata" element={<FormData/>}/>
+
+
     </Routes>
 
   );
