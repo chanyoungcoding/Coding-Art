@@ -1,12 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
+const multer = require('multer');
 
 const http = require("http");   
 const { Server } = require('socket.io');
 
 const app = express();
 const mySecretJwtKey = 'my-secret-key';
+
+const upload = multer();
 
 // ReactCookie 를 받아올 때 credentails 를 서버에서도 설정 해주어야 함.
 app.use(cors({
@@ -15,6 +18,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(upload.any());
 
 const testData = [
   {
@@ -37,6 +41,14 @@ app.get('/test', (req,res) => {
   const myCookie = req.headers.cookie;
   console.log(myCookie);
   res.json(testData)
+})
+
+app.post('/formTest', (req,res) => {
+  const formData = req.body;
+  const files = req.files; // 파일들은 req.files를 통해 접근 가능
+  console.log(files);
+  console.log(formData);
+  res.send('good');
 })
 
 // JWT Test

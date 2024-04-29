@@ -18,6 +18,7 @@ import MatterTest from './pages/MatterTest';
 import ReactGalleryImg from './pages/ReactGalleryImg';
 import Motion from './pages/motion/Motion';
 import Toastify from './pages/Toastify';
+import FormData from './pages/FormDataPage';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
       <Route path="/reactgallery" element={<ReactGalleryImg/>}/>
       <Route path="/motion" element={<Motion/>}/>
       <Route path="/toastify" element={<Toastify/>}/>
+      <Route path="/formdata" element={<FormData/>}/>
+
+
     </Routes>
 
   );

@@ -37,6 +37,7 @@ const Home = () => {
       <Link to={'/motion'}>motion</Link>
       <Link to={'/reacttransition'}>ReactTransitionGroup</Link>
       <Link to={'/toastify'}>toastify</Link>
+      <Link to={'/formdata'}>formData</Link>
     </HomeContainer>
   );
 }
