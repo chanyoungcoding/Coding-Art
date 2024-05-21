@@ -19,6 +19,7 @@ import ReactGalleryImg from './pages/ReactGalleryImg';
 import Motion from './pages/motion/Motion';
 import Toastify from './pages/Toastify';
 import FormData from './pages/FormDataPage';
+import SQLite from './pages/SQL/SQLite';
 
 function App() {
 
@@ -42,7 +43,7 @@ function App() {
       <Route path="/motion" element={<Motion/>}/>
       <Route path="/toastify" element={<Toastify/>}/>
       <Route path="/formdata" element={<FormData/>}/>
-
+      <Route path="/SQLite" element={<SQLite/>}/>
 
     </Routes>
 
