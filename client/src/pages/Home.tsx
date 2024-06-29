@@ -38,7 +38,8 @@ const Home = () => {
       <Link to={'/reacttransition'}>ReactTransitionGroup</Link>
       <Link to={'/toastify'}>toastify</Link>
       <Link to={'/formdata'}>formData</Link>
-      <Link to={'/SQLite'}>SQLite</Link>
+      <Link to={'/Magic'}>Magic</Link>
+
     </HomeContainer>
   );
 }
