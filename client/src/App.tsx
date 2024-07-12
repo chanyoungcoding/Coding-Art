@@ -20,6 +20,7 @@ import Motion from './pages/motion/Motion';
 import Toastify from './pages/Toastify';
 import FormData from './pages/FormDataPage';
 import Magic from './pages/Magic';
+import Gemini from './pages/Gemini';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
       <Route path="/toastify" element={<Toastify/>}/>
       <Route path="/formdata" element={<FormData/>}/>
       <Route path="/Magic" element={<Magic/>}/>
-
+      <Route path="/Gemini" element={<Gemini/>}/>
     </Routes>
 
   );

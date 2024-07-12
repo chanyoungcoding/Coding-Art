@@ -39,6 +39,7 @@ const Home = () => {
       <Link to={'/toastify'}>toastify</Link>
       <Link to={'/formdata'}>formData</Link>
       <Link to={'/Magic'}>Magic</Link>
+      <Link to={'/Gemini'}>Gemini</Link>
 
     </HomeContainer>
   );
